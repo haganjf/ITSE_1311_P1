@@ -5,23 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resto</title>
     <link href="style.css" type="text/css" rel="stylesheet">
-    <script>
-document.body.insertAdjacentHTML(
-    "beforeend",
-    `<pre id="debug"></pre>`
-);
-
-document.getElementById("debug").textContent =
-    "Viewport width: " + window.innerWidth +
-    "\nScreen width: " + window.screen.width +
-    "\nDPR: " + window.devicePixelRatio +
-    "\nMedia query: " +
-    window.matchMedia("(max-width: 400px)").matches;
-   </script>
 </head>
 
 <body>
-
     <header>
         <div class="wrapper">
             <h1 class="logo">Resto</h1>
@@ -33,6 +19,11 @@ document.getElementById("debug").textContent =
                     <li><a href="">Reservations</a></li>
                     <li><a href="">News</a></li>
                     <li><a href="">Reviews</a></li>
+                                        <script> 
+                        document.writeln("<p>Viewport width: " + window.innerWidth
+                             + "\nScreen width: " + window.screen.width + "\nDPR: " 
+                             + window.devicePixelRatio+"</p>");
+                    </script>
                 </ul>
             </nav>
         </div>
