@@ -6,9 +6,17 @@
     <title>Resto</title>
     <link href="style.css" type="text/css" rel="stylesheet">
     <script>
-        console.log("Viewport width:", window.innerWidth);
-      console.log("Screen width:", window.screen.width);
-      console.log("DPR:", window.devicePixelRatio);
+document.body.insertAdjacentHTML(
+    "beforeend",
+    `<pre id="debug"></pre>`
+);
+
+document.getElementById("debug").textContent =
+    "Viewport width: " + window.innerWidth +
+    "\nScreen width: " + window.screen.width +
+    "\nDPR: " + window.devicePixelRatio +
+    "\nMedia query: " +
+    window.matchMedia("(max-width: 400px)").matches;
    </script>
 </head>
 
